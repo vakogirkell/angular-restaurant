@@ -16,4 +16,7 @@ export class ApiService {
   getCategories() {
     return this.http.get("https://restaurant.stepprojects.ge/api/Categories/GetAll")
   }
+  filterByCategory(id : number){
+    return this.http.get(`https://restaurant.stepprojects.ge/api/Categories/GetCategory/${id}`)
+  }
 }

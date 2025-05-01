@@ -1,0 +1,24 @@
+<section>
+    <h1 style="text-align: center; font-size: 35px;">Categories</h1>
+    <div class="categories">
+        <button class="catbut">All</button>
+        @for (item of categories; track $index) {
+            <button (click)="changeCategory(item.id)" class="catbut">{{item.name}}</button>
+        }
+  </div>
+  <hr style="background-color: red; height: 2px; width: 100%;margin-bottom: 20px;">
+
+</section>
+<div class="productList">
+    @for (item of foodList; track $index) {
+      <div class="card" style="width: 18rem;">
+        <img style="width: 200px;
+        height: 200px;" [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.price}}$</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    }
+  </div>
