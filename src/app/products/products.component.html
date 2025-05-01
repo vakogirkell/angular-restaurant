@@ -1,0 +1,13 @@
+<div class="productList">
+    @for (item of products; track $index) {
+      <div class="card" style="width: 18rem;">
+        <img style="width: 200px;
+        height: 200px;" [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.price}}$</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    }
+  </div>
